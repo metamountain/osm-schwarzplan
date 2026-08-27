@@ -37,6 +37,10 @@ red, courtyards left white. Data © OpenStreetMap contributors (ODbL).*
 
 ## Installation
 
+> **New to Python / never installed it?** Read the beginner-friendly
+> **[Installing Python guide](docs/PYTHON_SETUP.md)** first — it walks through
+> setup on Windows, macOS, and Linux with no prior knowledge assumed.
+
 Requires **Python 3.8+**. `tkinter` ships with the standard Python installer.
 
 ```bash

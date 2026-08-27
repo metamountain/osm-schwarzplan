@@ -11,6 +11,7 @@ osm-schwarzplan/
 ├── .gitignore
 └── docs/
     ├── PROJECT_STRUCTURE.md    # This file
+    ├── PYTHON_SETUP.md         # Beginner guide: installing Python
     └── images/                 # README example images (WebP)
         ├── before-openstreetmap.webp
         ├── after-schwarzplan.webp
