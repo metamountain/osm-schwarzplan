@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="handmade-sample">
+  <!-- A simple rectangular building -->
+  <node id="1" lat="52.520000" lon="13.405000"/>
+  <node id="2" lat="52.520000" lon="13.405400"/>
+  <node id="3" lat="52.520250" lon="13.405400"/>
+  <node id="4" lat="52.520250" lon="13.405000"/>
+
+  <!-- A small garage next to it -->
+  <node id="10" lat="52.520000" lon="13.405500"/>
+  <node id="11" lat="52.520000" lon="13.405650"/>
+  <node id="12" lat="52.520120" lon="13.405650"/>
+  <node id="13" lat="52.520120" lon="13.405500"/>
+
+  <!-- A courtyard building: outer ring (20..23) with an inner hole (30..33) -->
+  <node id="20" lat="52.520400" lon="13.405000"/>
+  <node id="21" lat="52.520400" lon="13.405600"/>
+  <node id="22" lat="52.520700" lon="13.405600"/>
+  <node id="23" lat="52.520700" lon="13.405000"/>
+  <node id="30" lat="52.520480" lon="13.405150"/>
+  <node id="31" lat="52.520480" lon="13.405450"/>
+  <node id="32" lat="52.520620" lon="13.405450"/>
+  <node id="33" lat="52.520620" lon="13.405150"/>
+
+  <!-- building=no should be IGNORED -->
+  <node id="40" lat="52.519700" lon="13.405000"/>
+  <node id="41" lat="52.519700" lon="13.405300"/>
+  <node id="42" lat="52.519800" lon="13.405300"/>
+  <node id="43" lat="52.519800" lon="13.405000"/>
+
+  <way id="100">
+    <nd ref="1"/><nd ref="2"/><nd ref="3"/><nd ref="4"/><nd ref="1"/>
+    <tag k="building" v="yes"/>
+  </way>
+
+  <way id="101">
+    <nd ref="10"/><nd ref="11"/><nd ref="12"/><nd ref="13"/><nd ref="10"/>
+    <tag k="building" v="garage"/>
+  </way>
+
+  <way id="102">
+    <nd ref="20"/><nd ref="21"/><nd ref="22"/><nd ref="23"/><nd ref="20"/>
+  </way>
+  <way id="103">
+    <nd ref="30"/><nd ref="31"/><nd ref="32"/><nd ref="33"/><nd ref="30"/>
+  </way>
+
+  <way id="104">
+    <nd ref="40"/><nd ref="41"/><nd ref="42"/><nd ref="43"/><nd ref="40"/>
+    <tag k="building" v="no"/>
+  </way>
+
+  <relation id="200">
+    <member type="way" ref="102" role="outer"/>
+    <member type="way" ref="103" role="inner"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="building" v="yes"/>
+  </relation>
+</osm>

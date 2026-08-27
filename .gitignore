@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Generated Schwarzplan exports
+*_schwarzplan.dxf
+*_schwarzplan.svg
+*_schwarzplan.png
+out.dxf
+out.svg
+out.png
+cli_test.*
+
+# Raw, uncompressed source screenshots (compressed versions live in docs/images)
+/openmap.png
+/bwplan.png
+
+# Large OSM extracts (keep the tiny sample.osm tracked)
+area.osm
+*.osm.bz2
+*.osm.pbf
+
+# OS cruft
+.DS_Store
+Thumbs.db

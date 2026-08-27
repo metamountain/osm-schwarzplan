@@ -1,0 +1,5 @@
+# Optional dependencies — auto-installed on first use unless --no-install.
+# tkinter is part of the Python standard library (ships with the installer).
+
+ezdxf>=1.0    # required only for DXF export
+Pillow>=9.0   # required only for PNG export
